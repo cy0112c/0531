@@ -19,6 +19,11 @@ const assignments = [
     path: "counter",
     title: "카운터 만들기",
   },
+  {
+    order: 4,
+    path: "like-dislike",
+    title: "좋아요 / 싫어요 만들기",
+  },
 ];
 
 export default function Home() {
