@@ -13,13 +13,15 @@ export default function Assignment3() {
 }
 
 function Counter() {
-  let count = 0;
+  // let count = 0;
+  const [count, setCount] = useState(0);
   return (
     <div>
       <h1>{count}</h1>
       <button
         onClick={() => {
-          count = count + 1;
+          // count = count + 1;
+          setCount(count + 1);
           console.log(count);
         }}
       >
