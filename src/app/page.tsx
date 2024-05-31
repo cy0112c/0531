@@ -12,7 +12,8 @@ const assignments = [
     order: 2,
     path: "profile-card",
     title: "프로필 카드 만들기",
-    description: "object 형식의 데이터를 만들고 그것을 이용해서 프로필 카드 만들기",
+    description:
+      "object 형식의 데이터를 만들고 그것을 이용해서 프로필 카드 만들기",
   },
   {
     order: 3,
@@ -23,6 +24,11 @@ const assignments = [
     order: 4,
     path: "like-dislike",
     title: "좋아요 / 싫어요 만들기",
+  },
+  {
+    order: 5,
+    path: "to-do-list",
+    title: "To-do List 만들기",
   },
 ];
 
