@@ -45,6 +45,7 @@ export default function Assignment1() {
     },
   ];
 
+  function 상품(props: { imageSrc: string; title: string; price: number }) {
   return (
     <>
       <Header title={"상품목록 만들기"} hasBack={true} />
@@ -53,10 +54,10 @@ export default function Assignment1() {
           {/* 여기서부터 */}
           <div className="rounded-md bg-white w-52 h-72 border p-3 gap-1 flex flex-col">
             <div className="w-full aspect-square rounded-md">
-              <img src="" className="rounded-md w-full aspect-square" />
+              <img src={props.imageSrc} className="rounded-md w-full aspect-square" />
             </div>
-            <div className="h-12 max-h-12 overflow-hidden">상품명</div>
-            <div className="font-bold">0원</div>
+            <div className="h-12 max-h-12 overflow-hidden">{props.title}</div>
+            <div className="font-bold">{props.price}</div>
           </div>
           {/* 여기까지 */}
         </div>
