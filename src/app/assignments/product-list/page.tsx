@@ -1,4 +1,5 @@
 import Header from "@/components/header";
+import { title } from "process";
 
 interface IProduct {
   imageSrc?: string;
@@ -6,8 +7,20 @@ interface IProduct {
   price: number;
 }
 
+function Product(props: IProduct) {
+  return (
+    <div className="rounded-md bg-white w-52 h-72 border p-3 gap-1 flex flex-col">
+      <div className="w-full aspect-square rounded-md">
+        <img src={props.imageSrc} className="rounded-md w-full aspect-square" />
+      </div>
+      <div className="h-12 max-h-12 overflow-hidden">{props.title}</div>
+      <div className="font-bold">{props.price}원</div>
+    </div>
+  );
+}
+
 export default function Assignment1() {
-  const product: IProduct = {
+  const 토마토: IProduct = {
     imageSrc: "https://gdimg.gmarket.co.kr/2004408943/still/300?ver=1712543662",
     title: "(15%쿠폰)탱글탱글 대추방울토마토 2kg 4번 소과",
     price: 13900,
@@ -45,21 +58,21 @@ export default function Assignment1() {
     },
   ];
 
-  function 상품(props: { imageSrc: string; title: string; price: number }) {
   return (
     <>
       <Header title={"상품목록 만들기"} hasBack={true} />
       <div className="w-full h-full flex flex-col overflow-y-auto py-5 px-5 gap-5 scrollbar-hide">
         <div className="w-full gap-4 grid grid-cols-2">
           {/* 여기서부터 */}
-          <div className="rounded-md bg-white w-52 h-72 border p-3 gap-1 flex flex-col">
-            <div className="w-full aspect-square rounded-md">
-              <img src={props.imageSrc} className="rounded-md w-full aspect-square" />
-            </div>
-            <div className="h-12 max-h-12 overflow-hidden">{props.title}</div>
-            <div className="font-bold">{props.price}</div>
-          </div>
+          {/* <Product price={토마토.price} title={토마토.title} imageSrc={토마토.imageSrc}></Product> */}
           {/* 여기까지 */}
+          {products.map((상품) => (
+            <Product
+              imageSrc={상품.imageSrc}
+              title={상품.title}
+              price={상품.price}
+            ></Product>
+          ))}
         </div>
       </div>
     </>
